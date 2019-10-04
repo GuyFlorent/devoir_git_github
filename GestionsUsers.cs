@@ -19,4 +19,21 @@
             return dataReader.Read();
         }
 
+      public void CreateAccount()
+        {
 
+            Console.WriteLine("Voulez Enregistrer un compe? O/N");
+            choice = Console.ReadLine();
+            if (choice == "o")
+            {
+                Console.WriteLine("**** SIGN IN :**************************************");
+                Console.WriteLine("Enregistrons  votre Nom:");
+                Nom = Console.ReadLine();
+                Console.WriteLine("Enregistrons  votre login:");
+                Login = Console.ReadLine();
+                Console.WriteLine("Enregistrons votre Mot de passe:");
+                Pass = Console.ReadLine();
+                Operations Operation = new Operations();
+                Operation.EnregisterCompteBDD(Nom, Login, Pass);
+            }
+        }
